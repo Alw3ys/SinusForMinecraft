@@ -13,6 +13,11 @@ registerPlugin({
         var conn = net.connect({ host: '127.0.0.1', port: 1234 }, function(err) {
             if (err) engine.log(err);
         });
-        if (conn) conn.write('{"title":"' + trackEvent.title() + '", "artist":"' + trackEvent.artist() + '", "duration":' + trackEvent.duration() + '}');
+        
+        if (conn) conn.write(JSON.stringify({
+            title: trackEvent.title(),
+            artist: trackEvent.artist(),
+            duration: trackEvent.duration()
+        });
     });
 });
