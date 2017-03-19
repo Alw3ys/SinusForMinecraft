@@ -18,6 +18,6 @@ registerPlugin({
             title: trackEvent.title(),
             artist: trackEvent.artist(),
             duration: trackEvent.duration()
-        });
+        }));
     });
 });
