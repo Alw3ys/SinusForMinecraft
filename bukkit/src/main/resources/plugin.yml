@@ -1,0 +1,11 @@
+main: com.alw3ys.sinusforminecraft.SinusForMinecraft
+name: ${project.name}
+description: ${project.description}
+version: ${project.version}
+author: Alw3ys
+
+commands:
+  ttb:
+    description: Toggle track broadcasts
+  track:
+    description: Current playing track information

@@ -1,0 +1,20 @@
+port: 1234
+
+trackInfo:
+  noPermissions: "&cYou do not have permissions to execute this command!"
+  separators:
+    enable: true
+    message: "&e&m============================================="
+  noTrack: "&cNo tracks played yet"
+  artist: "&6Artist: &e%artist%"
+  title: "&6Title: &e%title%"
+  duration: "&6Duration: &e%duration%"
+
+toggleBroadcast:
+  noPermissions: "&cYou do not have permissions to execute this command!"
+  enabled: "&aTrack broadcasts enabled"
+  disabled: "&cTrack broadcasts disabled"
+
+broadcast:
+  enable: true
+  message: "&6Now playing: &e%title%"
