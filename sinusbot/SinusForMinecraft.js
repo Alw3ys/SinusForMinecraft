@@ -14,10 +14,9 @@ registerPlugin({
             if (err) engine.log(err);
         });
         
-        if (conn) conn.write(JSON.stringify({
-            title: trackEvent.title(),
-            artist: trackEvent.artist(),
-            duration: trackEvent.duration()
-        }));
+        if (conn) {
+            var trackInfo = { title:trackEvent.title(), artist:trackEvent.artist(), duration:trackEvent.duration() };
+            conn.write(JSON.stringify(trackInfo));
+        }
     });
 });
