@@ -4,7 +4,7 @@
 
     <groupId>com.alw3ys</groupId>
     <artifactId>SinusForMinecraft</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.1-SNAPSHOT</version>
     <name>SinusForMinecraft</name>
     <description>Connect Sinusbot with a BungeeCord or Bukkit Server</description>
 
