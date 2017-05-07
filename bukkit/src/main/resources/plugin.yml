@@ -1,4 +1,4 @@
-main: com.alw3ys.sinusforminecraft.SinusForMinecraft
+main: com.alw3ys.sinusforminecraft.SinusForMinecraftPlugin
 name: ${project.name}
 description: ${project.description}
 version: ${project.version}

@@ -1,18 +1,16 @@
 package com.alw3ys.sinusforminecraft;
 
+import lombok.RequiredArgsConstructor;
+
 import java.io.IOException;
 import java.net.Socket;
 import java.nio.charset.StandardCharsets;
 
+@RequiredArgsConstructor
 class SocketReader implements Runnable {
 
-    private final SinusForMinecraft plugin;
+    private final SinusForMinecraftPlugin plugin;
     private final Socket socket;
-
-    SocketReader(SinusForMinecraft plugin, Socket socket) {
-        this.plugin = plugin;
-        this.socket = socket;
-    }
 
     @Override
     public void run() {

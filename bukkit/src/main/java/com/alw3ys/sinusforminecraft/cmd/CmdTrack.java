@@ -1,21 +1,19 @@
 package com.alw3ys.sinusforminecraft.cmd;
 
-import com.alw3ys.sinusforminecraft.SinusForMinecraft;
+import com.alw3ys.sinusforminecraft.SinusForMinecraftPlugin;
 import com.alw3ys.sinusforminecraft.TrackManager;
 import com.alw3ys.sinusforminecraft.utils.TimeUtils;
+import lombok.RequiredArgsConstructor;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.ConfigurationSection;
 
+@RequiredArgsConstructor
 public class CmdTrack implements CommandExecutor {
 
-    private final SinusForMinecraft plugin;
-
-    public CmdTrack(SinusForMinecraft plugin) {
-        this.plugin = plugin;
-    }
+    private final SinusForMinecraftPlugin plugin;
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String s, String[] args) {

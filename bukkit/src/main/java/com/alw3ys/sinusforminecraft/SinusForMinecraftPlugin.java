@@ -11,16 +11,15 @@ import org.bukkit.scheduler.BukkitRunnable;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 import java.util.concurrent.Executors;
 
-public class SinusForMinecraft extends JavaPlugin {
+@Getter
+public class SinusForMinecraftPlugin extends JavaPlugin {
 
-    @Getter
     private TrackUtils trackUtils;
-    @Getter
-    private List<Player> playerList = new ArrayList<>();
+    private Set<Player> playerList = new HashSet<>();
 
     @Override
     public void onEnable() {
@@ -32,7 +31,7 @@ public class SinusForMinecraft extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new MainListeners(this), this);
     }
 
-    private void initSocketServer(final SinusForMinecraft plugin) {
+    private void initSocketServer(final SinusForMinecraftPlugin plugin) {
 
         new BukkitRunnable() {
 

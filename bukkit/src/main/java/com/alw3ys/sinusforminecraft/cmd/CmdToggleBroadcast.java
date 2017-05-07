@@ -1,6 +1,7 @@
 package com.alw3ys.sinusforminecraft.cmd;
 
-import com.alw3ys.sinusforminecraft.SinusForMinecraft;
+import com.alw3ys.sinusforminecraft.SinusForMinecraftPlugin;
+import lombok.RequiredArgsConstructor;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -8,15 +9,12 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.entity.Player;
 
-import java.util.List;
+import java.util.Set;
 
+@RequiredArgsConstructor
 public class CmdToggleBroadcast implements CommandExecutor {
 
-    private final SinusForMinecraft plugin;
-
-    public CmdToggleBroadcast(SinusForMinecraft plugin) {
-        this.plugin = plugin;
-    }
+    private final SinusForMinecraftPlugin plugin;
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String s, String[] args) {
@@ -32,7 +30,7 @@ public class CmdToggleBroadcast implements CommandExecutor {
             return true;
         }
 
-        List<Player> playerList = plugin.getPlayerList();
+        Set<Player> playerList = plugin.getPlayerList();
 
         if (!playerList.contains(player)) {
             playerList.add(player);
